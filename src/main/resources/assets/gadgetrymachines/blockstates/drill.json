@@ -1,0 +1,10 @@
+{
+    "variants":{
+        "facing=down":  { "model": "gadgetrymachines:drill", "x": 90 },
+        "facing=east":  { "model": "gadgetrymachines:drill", "y": 90 },
+        "facing=north": { "model": "gadgetrymachines:drill", "y": 0 },
+        "facing=south": { "model": "gadgetrymachines:drill", "y": 180 },
+        "facing=up":    { "model": "gadgetrymachines:drill", "x": 270 },
+        "facing=west":  { "model": "gadgetrymachines:drill", "y": 270 }
+    }
+}

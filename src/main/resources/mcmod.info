@@ -1,0 +1,16 @@
+[
+{
+  "modid": "gadgetrymachines",
+  "name": "Gadgetry: Machines",
+  "description": "Machines module for Gadgetry.",
+  "version": "0.2.1",
+  "mcversion": "1.12.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Elucent"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": [forge, elulib, gadgetrycore]
+}
+]

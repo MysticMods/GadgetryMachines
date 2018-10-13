@@ -1,0 +1,10 @@
+{
+    "variants":{
+        "facing=down":  { "model": "gadgetrymachines:grinder", "x": 90 },
+        "facing=up":    { "model": "gadgetrymachines:grinder", "x": 270 },
+        "facing=north": { "model": "gadgetrymachines:grinder", "y": 0 },
+        "facing=south": { "model": "gadgetrymachines:grinder", "y": 180 },
+        "facing=west":  { "model": "gadgetrymachines:grinder", "y": 270 },
+        "facing=east":  { "model": "gadgetrymachines:grinder", "y": 90 }
+    }
+}

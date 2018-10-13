@@ -1,0 +1,10 @@
+{
+    "parent": "gadgetrycore:block/orientable_machine",
+    "textures": {
+        "side": "gadgetrymachines:blocks/iron_plate",
+        "front": "gadgetrymachines:blocks/powered_furnace_on",
+        "top": "gadgetrymachines:blocks/iron_plate",
+        "bottom": "gadgetrymachines:blocks/iron_plate",
+        "particle": "gadgetrymachines:blocks/powered_furnace_on"
+    }
+}

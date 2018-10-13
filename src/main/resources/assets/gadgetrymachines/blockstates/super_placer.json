@@ -1,0 +1,10 @@
+{
+    "variants":{
+        "facing=down":  { "model": "gadgetrymachines:super_placer", "x": 180 },
+        "facing=up":    { "model": "gadgetrymachines:super_placer" },
+        "facing=north": { "model": "gadgetrymachines:super_placer", "x": 270, "y": 180 },
+        "facing=south": { "model": "gadgetrymachines:super_placer", "x": 270 },
+        "facing=west":  { "model": "gadgetrymachines:super_placer", "x": 270, "y": 90 },
+        "facing=east":  { "model": "gadgetrymachines:super_placer", "x": 270, "y": 270 }
+    }
+}

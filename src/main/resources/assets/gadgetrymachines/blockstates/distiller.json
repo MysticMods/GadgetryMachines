@@ -1,0 +1,10 @@
+{
+    "variants":{
+        "facing=down":  { "model": "gadgetrymachines:distiller", "x": 90 },
+        "facing=east":  { "model": "gadgetrymachines:distiller", "y": 90 },
+        "facing=north": { "model": "gadgetrymachines:distiller", "y": 0 },
+        "facing=south": { "model": "gadgetrymachines:distiller", "y": 180 },
+        "facing=up":    { "model": "gadgetrymachines:distiller", "x": 270 },
+        "facing=west":  { "model": "gadgetrymachines:distiller", "y": 270 }
+    }
+}

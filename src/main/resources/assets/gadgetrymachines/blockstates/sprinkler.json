@@ -1,0 +1,10 @@
+{
+    "variants":{
+        "facing=down":  { "model": "gadgetrymachines:sprinkler", "x": 90 },
+        "facing=up":    { "model": "gadgetrymachines:sprinkler", "x": 270 },
+        "facing=north": { "model": "gadgetrymachines:sprinkler", "y": 0 },
+        "facing=south": { "model": "gadgetrymachines:sprinkler", "y": 180 },
+        "facing=west":  { "model": "gadgetrymachines:sprinkler", "y": 270 },
+        "facing=east":  { "model": "gadgetrymachines:sprinkler", "y": 90 }
+    }
+}

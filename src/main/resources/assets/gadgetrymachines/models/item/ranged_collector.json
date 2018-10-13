@@ -1,0 +1,19 @@
+{
+    "parent": "block/cube",
+    "display": {
+        "firstperson_righthand": {
+            "rotation": [ 0, 135, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.40, 0.40, 0.40 ]
+        }
+    },
+    "textures": {
+        "particle": "gadgetrymachines:blocks/solar_panel",
+        "down": "gadgetrymachines:blocks/iron_plate",
+        "up": "gadgetrymachines:blocks/iron_plate",
+        "north": "gadgetrymachines:blocks/ranged_collector",
+        "east": "gadgetrymachines:blocks/ranged_collector",
+        "south": "gadgetrymachines:blocks/ranged_collector",
+        "west": "gadgetrymachines:blocks/ranged_collector"
+    }
+}

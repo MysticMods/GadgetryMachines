@@ -1,0 +1,19 @@
+{
+    "parent": "block/cube",
+    "display": {
+        "firstperson_righthand": {
+            "rotation": [ 0, 135, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.40, 0.40, 0.40 ]
+        }
+    },
+    "textures": {
+        "particle": "gadgetrymachines:blocks/fluid_tank",
+        "down": "gadgetrymachines:blocks/iron_plate",
+        "up": "gadgetrymachines:blocks/iron_plate",
+        "north": "gadgetrymachines:blocks/fluid_tank",
+        "east": "gadgetrymachines:blocks/fluid_tank",
+        "south": "gadgetrymachines:blocks/fluid_tank",
+        "west": "gadgetrymachines:blocks/fluid_tank"
+    }
+}

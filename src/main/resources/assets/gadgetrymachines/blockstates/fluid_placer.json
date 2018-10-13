@@ -1,0 +1,10 @@
+{
+    "variants":{
+        "facing=down":  { "model": "gadgetrymachines:fluid_placer", "x": 180 },
+        "facing=up":    { "model": "gadgetrymachines:fluid_placer" },
+        "facing=north": { "model": "gadgetrymachines:fluid_placer", "x": 270, "y": 180 },
+        "facing=south": { "model": "gadgetrymachines:fluid_placer", "x": 270 },
+        "facing=west":  { "model": "gadgetrymachines:fluid_placer", "x": 270, "y": 90 },
+        "facing=east":  { "model": "gadgetrymachines:fluid_placer", "x": 270, "y": 270 }
+    }
+}

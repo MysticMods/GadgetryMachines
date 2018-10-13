@@ -1,0 +1,50 @@
+{
+    "parent":"block/block",
+	"textures": {
+		"particle": "gadgetrymachines:blocks/grinder_off",
+		"plate": "gadgetrymachines:blocks/iron_plate",
+		"grinder": "gadgetrymachines:blocks/grinder_off",
+		"slots": "gadgetrymachines:blocks/grinder_slots"
+	},
+	"elements": [ 	 
+		{
+			"__comment": "Box1",
+			"from": [ 0, 0, 5 ],
+			"to": [ 16, 10, 11 ],
+			"faces": {
+				"down": { "uv": [ 0, 5, 16, 11 ], "texture": "#plate" },
+				"up": { "uv": [ 0, 5, 16, 11 ], "texture": "#slots" },
+				"north": { "uv": [ 0, 6, 16, 16 ], "texture": "#plate" },
+				"south": { "uv": [ 0, 6, 16, 16 ], "texture": "#plate" },
+				"west": { "uv": [ 5, 6, 11, 16 ], "texture": "#plate" },
+				"east": { "uv": [ 5, 6, 11, 16 ], "texture": "#plate" }
+			}
+		},
+		{
+			"__comment": "Box1",
+			"from": [ 0, 0, 0 ],
+			"to": [ 16, 16, 5 ],
+			"faces": {
+				"down": { "uv": [ 0, 11, 16, 16 ], "texture": "#plate" },
+				"up": { "uv": [ 0, 0, 16, 5 ], "texture": "#plate" },
+				"north": { "uv": [ 0, 0, 16, 16 ], "texture": "#grinder" },
+				"south": { "uv": [ 0, 0, 16, 16 ], "texture": "#slots" },
+				"west": { "uv": [ 0, 0, 5, 16 ], "texture": "#plate" },
+				"east": { "uv": [ 11, 0, 16, 16 ], "texture": "#plate" }
+			}
+		},
+		{
+			"__comment": "Box1",
+			"from": [ 0, 0, 11 ],
+			"to": [ 16, 16, 16 ],
+			"faces": {
+				"down": { "uv": [ 0, 0, 16, 5 ], "texture": "#plate" },
+				"up": { "uv": [ 0, 11, 16, 16 ], "texture": "#plate" },
+				"north": { "uv": [ 0, 0, 16, 16 ], "texture": "#slots" },
+				"south": { "uv": [ 0, 0, 16, 16 ], "texture": "#plate" },
+				"west": { "uv": [ 11, 0, 16, 16 ], "texture": "#plate" },
+				"east": { "uv": [ 0, 0, 5, 16 ], "texture": "#plate" }
+			}
+		}
+	]
+}

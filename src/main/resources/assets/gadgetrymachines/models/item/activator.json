@@ -1,0 +1,19 @@
+{
+    "parent": "block/cube",
+    "display": {
+        "firstperson_righthand": {
+            "rotation": [ 0, 135, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.40, 0.40, 0.40 ]
+        }
+    },
+    "textures": {
+        "particle": "gadgetrymachines:blocks/activator",
+        "down": "gadgetrymachines:blocks/steel_plate",
+        "up": "gadgetrymachines:blocks/activator",
+        "north": "gadgetrymachines:blocks/steel_device_side",
+        "east": "gadgetrymachines:blocks/steel_device_side",
+        "south": "gadgetrymachines:blocks/steel_device_side",
+        "west": "gadgetrymachines:blocks/steel_device_side"
+    }
+}
