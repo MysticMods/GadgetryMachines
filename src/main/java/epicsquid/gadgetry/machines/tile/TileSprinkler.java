@@ -9,11 +9,11 @@ import epicsquid.gadgetry.core.lib.tile.module.ModuleEnergy;
 import epicsquid.gadgetry.core.lib.tile.module.ModuleFluid;
 import epicsquid.gadgetry.core.lib.util.Util;
 import epicsquid.gadgetry.machines.block.BlockSprinkler;
+import epicsquid.gadgetry.machines.util.SpawnWaterParticle;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.particle.ParticleWaterWake;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
@@ -79,28 +79,14 @@ public class TileSprinkler extends TileModular implements ITickable {
         }
       } else {
         IBlockState state = world.getBlockState(getPos());
-        if (state.getBlock() instanceof BlockSprinkler) {
+        if (state.getBlock() instanceof BlockSprinkler && world.isRemote) {
           EnumFacing face = state.getValue(BlockSprinkler.facing);
           Vec3i dir = face.getDirectionVec();
           float baseX = getPos().getX() + 0.5f - (4.5f / 16f) * dir.getZ();
           float baseY = getPos().getY() + 0.5f;
           float baseZ = getPos().getZ() + 0.5f - (4.5f / 16f) * dir.getX();
           float sin = MathHelper.sin(0.001f * (lifetime + Minecraft.getMinecraft().getRenderPartialTicks()));
-          for (int i = 0; i < 4; i++) {
-            ParticleWaterWake p = new ParticleWaterWake(world, baseX + (9f / 16f) * (i / 3f) * dir.getZ(), baseY, baseZ + (9f / 16f) * (i / 3f) * dir.getX(),
-                sin * 0.25 * dir.getX() + (-0.1f + 0.2f * (i / 3f)) * dir.getZ(), 0.6, sin * 0.25 * dir.getZ() + (-0.1f + 0.2f * (i / 3f)) * dir.getX()) {
-              @Override
-              public void onUpdate() {
-                if (this.particleAge == 0) {
-                  particleGravity = 0.05f;
-                  particleMaxAge = 40;
-                }
-                this.particleAge++;
-                super.onUpdate();
-              }
-            };
-            Minecraft.getMinecraft().effectRenderer.addEffect(p);
-          }
+          SpawnWaterParticle.spawn(dir, world, baseX, baseY, baseZ, sin);
         }
       }
     }
