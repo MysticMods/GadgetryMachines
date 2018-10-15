@@ -21,7 +21,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @Mod(modid = GadgetryMachines.MODID, version = GadgetryMachines.VERSION, name = GadgetryMachines.NAME, dependencies = "required-before:gadgetrycore")
 public class GadgetryMachines {
   public static final String MODID = "gadgetrymachines";
-  public static final String VERSION = "0.2.1";
+  public static final String VERSION = "@VERSION@";
   public static final String NAME = "Gadgetry: Machines";
 
   public static ModContainer CONTAINER;
