@@ -42,14 +42,14 @@ public class MachinesRecipeRegistry {
     registerShaped(event.getRegistry(), "grinder", new ItemStack(GadgetryMachinesContent.grinder, 1), "S S", "SPS", "III", 'I', "ingotIron", 'S', "ingotSteel",
         'P', Blocks.HOPPER);
     registerShaped(event.getRegistry(), "solar_panel", new ItemStack(GadgetryMachinesContent.solar_panel, 1), "SSS", "SSS", "IRI", 'I', "ingotIron", 'S',
-        "silicon", 'R', "ingotRedmetal");
+        "itemSilicon", 'R', "ingotRedmetal");
     registerShaped(event.getRegistry(), "fluid_pump", new ItemStack(GadgetryMachinesContent.pump, 1), "III", " S ", "IPI", 'I', "ingotIron", 'S', "ingotSteel",
         'P', Blocks.PISTON);
     registerShaped(event.getRegistry(), "powered_alloyer", new ItemStack(GadgetryMachinesContent.powered_alloyer, 1), "III", "SFS", "SFS", 'I', "ingotIron",
         'S', "ingotSteel", 'F', Blocks.FURNACE);
     registerShaped(event.getRegistry(), "assembly_press", new ItemStack(GadgetryMachinesContent.assembly_press, 1), "ICI", "IWI", "III", 'I', "ingotIron", 'W',
         Blocks.CRAFTING_TABLE, 'C', "circuitBasic");
-    registerShaped(event.getRegistry(), "circuit", new ItemStack(GadgetryMachinesContent.circuit, 1), "G G", " S ", " G ", 'G', "nuggetGold", 'S', "silicon");
+    registerShaped(event.getRegistry(), "circuit", new ItemStack(GadgetryMachinesContent.circuit, 1), "G G", " S ", " G ", 'G', "nuggetGold", 'S', "itemSilicon");
     registerShaped(event.getRegistry(), "placer", new ItemStack(GadgetryMachinesContent.placer, 1), " I ", "I I", "RSR", 'S', "ingotSteel", 'I', "ingotIron",
         'R', "dustRedstone");
     registerShaped(event.getRegistry(), "breaker", new ItemStack(GadgetryMachinesContent.breaker, 1), " I ", "IPI", "RSR", 'S', "ingotSteel", 'I', "ingotIron",
