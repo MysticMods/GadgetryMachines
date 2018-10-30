@@ -19,12 +19,12 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@Mod(modid = GadgetryMachines.MODID, version = GadgetryMachines.VERSION, name = GadgetryMachines.NAME, dependencies = "required-after:gadgetrycore@[" + GadgetryCore.VERSION
-    + ",)")
+@Mod(modid = GadgetryMachines.MODID, version = GadgetryMachines.VERSION, name = GadgetryMachines.NAME, dependencies = GadgetryMachines.DEPENDENCIES)
 public class GadgetryMachines {
   public static final String MODID = "gadgetrymachines";
   public static final String VERSION = "@VERSION@";
   public static final String NAME = "Gadgetry: Machines";
+  public static final String DEPENDENCIES = "required-before:gadgetrycore@[" + GadgetryCore.VERSION + ",)";
 
   public static ModContainer CONTAINER;
 
