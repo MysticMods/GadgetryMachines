@@ -1,5 +1,6 @@
 package epicsquid.gadgetry.machines;
 
+import epicsquid.gadgetry.core.GadgetryCore;
 import epicsquid.gadgetry.machines.proxy.CommonProxy;
 import epicsquid.gadgetry.machines.recipe.MachinesRecipeRegistry;
 import net.minecraft.creativetab.CreativeTabs;
@@ -18,7 +19,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@Mod(modid = GadgetryMachines.MODID, version = GadgetryMachines.VERSION, name = GadgetryMachines.NAME, dependencies = "required-before:gadgetrycore")
+@Mod(modid = GadgetryMachines.MODID, version = GadgetryMachines.VERSION, name = GadgetryMachines.NAME, dependencies = "required-after:gadgetrycore@[" + GadgetryCore.VERSION
+    + ",)")
 public class GadgetryMachines {
   public static final String MODID = "gadgetrymachines";
   public static final String VERSION = "@VERSION@";
