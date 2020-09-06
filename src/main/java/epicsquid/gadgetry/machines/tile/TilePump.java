@@ -20,6 +20,9 @@ import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.IFluidBlock;
 
+//For some reason this pump is almost impossible to get fluid out from. 
+//I'm thinking that pipes might be looking for a way to pull from this, but it lacks a "pullFluid" type method. 
+//Also pumps that destroy the water source are silly. You pump once then stop??
 public class TilePump extends TileModular implements ITickable {
 
   public static final String BATTERY = "battery";
@@ -63,15 +66,16 @@ public class TilePump extends TileModular implements ITickable {
             tank.manager.fill(stack, true);
           }
           markDirty();
-          world.setBlockToAir(pos);
-          world.notifyBlockUpdate(pos, state, Blocks.AIR.getDefaultState(), 8);
-          world.notifyNeighborsOfStateChange(pos.north(), Blocks.AIR, true);
-          world.notifyNeighborsOfStateChange(pos.south(), Blocks.AIR, true);
-          world.notifyNeighborsOfStateChange(pos.east(), Blocks.AIR, true);
-          world.notifyNeighborsOfStateChange(pos.west(), Blocks.AIR, true);
-          world.notifyNeighborsOfStateChange(pos.up(), Blocks.AIR, true);
-          world.notifyNeighborsOfStateChange(pos.down(), Blocks.AIR, true);
-          world.notifyNeighborsOfStateChange(pos, Blocks.AIR, true);
+          //No, don't destroy source blocks. Bad pump. This has a wierd side effect when pumping lava of destroying huge areas. 
+          //world.setBlockToAir(pos);
+          //world.notifyBlockUpdate(pos, state, Blocks.AIR.getDefaultState(), 8);
+          //world.notifyNeighborsOfStateChange(pos.north(), Blocks.AIR, true);
+          //world.notifyNeighborsOfStateChange(pos.south(), Blocks.AIR, true);
+          //world.notifyNeighborsOfStateChange(pos.east(), Blocks.AIR, true);
+          //world.notifyNeighborsOfStateChange(pos.west(), Blocks.AIR, true);
+          //world.notifyNeighborsOfStateChange(pos.up(), Blocks.AIR, true);
+          //world.notifyNeighborsOfStateChange(pos.down(), Blocks.AIR, true);
+          //world.notifyNeighborsOfStateChange(pos, Blocks.AIR, true);
           return false;
         }
       }
@@ -84,6 +88,7 @@ public class TilePump extends TileModular implements ITickable {
     if (!world.isRemote) {
       ModuleEnergy energy = (ModuleEnergy) modules.get(BATTERY);
       ModuleFluid tank = (ModuleFluid) modules.get(TANK);
+      //This is inefficient. Switch to a list>stack model for easier parsing of updates.
       if (energy.battery.getEnergyStored() >= 10 && tank.tanks.get(0).getFluidAmount() <= tank.tanks.get(0).getCapacity() - 1000) {
         energy.battery.extractEnergy(10, false);
         progress[0]++;
